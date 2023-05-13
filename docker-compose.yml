@@ -38,6 +38,14 @@ services:
     networks:
       - app-network
 
+  python: 
+    build: ./docker/python
+    container_name: python
+    volumes:
+      - ./src:/src
+    networks:
+      - app-network
+
 networks:
   app-network:
     driver: bridge
